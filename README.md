@@ -2,8 +2,8 @@
 
 📌[CRTagsLabel](https://github.com/Lcrnice/CRTagsLabel) generated tag by the attributedText.  
 
-## Demo video & Screenshots
-You're probably curious how it looks. Here's some shots from the example app:
+## Preview
+You're probably curious how it looks. Here you are:
 ![CRTagsLabel_Gif](http://ww1.sinaimg.cn/large/006y8lVajw1f9pqam7eqjg30aa0ic1kx.gif)
 
 ## Usage  
