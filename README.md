@@ -21,20 +21,20 @@ Create a subclass of `CRTagsView` to dispay tag , override `-setupTagsViewWithMo
 Create `CRTagsLabel` in UIViewController, config `block` and `tags`.
 ```obj-c
 NSAttributedString *(^block)() = ^NSAttributedString *() {
-        CRCustomTagsView *customTagView = [[CRCustomTagsView alloc] initWithAlignment:self.alignment];
-        
-        return [customTagView attributedStringWithTags:tags];
-    };
+    CRCustomTagsView *customTagView = [[CRCustomTagsView alloc] initWithAlignment:self.alignment];
+
+    return [customTagView attributedStringWithTags:tags];
+};
     
-    CRTagsLabel *tagsLabel = [[CRTagsLabel alloc] initWithBlock:block];
-    tagsLabel.tags = tags;
-    tagsLabel.delegate = self;
-    [self.view addSubview:tagsLabel];
-    [tagsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@100);
-        make.left.equalTo(@10);
-        make.right.equalTo(@-10);
-    }];
+CRTagsLabel *tagsLabel = [[CRTagsLabel alloc] initWithBlock:block];
+tagsLabel.tags = tags;
+tagsLabel.delegate = self;
+[self.view addSubview:tagsLabel];
+[tagsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.top.equalTo(@100);
+    make.left.equalTo(@10);
+    make.right.equalTo(@-10);
+}];
 ```
 
 ## TODO
