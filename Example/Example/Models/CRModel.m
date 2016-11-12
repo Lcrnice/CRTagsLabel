@@ -18,22 +18,13 @@
     NSMutableArray *arrayMut = [tagString componentsSeparatedByString:@", "].mutableCopy;
     NSMutableArray *tagArray = @[].mutableCopy;
     
-//    while (arrayMut.count > 0) {
-//        NSString *tag = [arrayMut objectAtIndex:arc4random() % arrayMut.count];
-//        [arrayMut removeObject:tag];
-//        
-//        CRModel *model = [CRModel new];
-//        model.title = tag;
-//        model.color = [self colorOfRandom];
-//        model.enabled = @(YES);
-//        [tagArray addObject:model];
-//    }
-    
-    for (NSString *str in arrayMut) {
+    while (arrayMut.count > 0) {
+        NSString *tag = [arrayMut objectAtIndex:arc4random() % arrayMut.count];
+        [arrayMut removeObject:tag];
+        
         CRModel *model = [CRModel new];
-        model.title = str;
-//        model.color = [self colorOfRandom];
-        model.color = [UIColor colorWithRed:1.00 green:0.42 blue:0.60 alpha:1.0];
+        model.title = tag;
+        model.color = [self colorOfRandom];
         model.enabled = @(YES);
         [tagArray addObject:model];
     }
