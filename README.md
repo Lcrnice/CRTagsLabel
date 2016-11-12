@@ -50,4 +50,4 @@ Lcrnice [@Lcrnice](https://twitter.com/Lcrnice)
 
 ## License
 
-Moya-ObjectMapper is released under an MIT license. See LICENSE for more information.
+CRTagsLabel is released under an MIT license. See LICENSE for more information.
