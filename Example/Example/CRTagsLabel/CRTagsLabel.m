@@ -51,6 +51,11 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
+    [self updateTagsLabelHeight];
+}
+
+#pragma mark - helper
+- (void)updateTagsLabelHeight {
     CGFloat height = self.frame.size.height;
     if (height == currentHeight) {
         return;
@@ -94,6 +99,11 @@
     if (self.updateTags) {
         self.attributedText = self.updateTags();
     }
+    
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
+
+    [self updateTagsLabelHeight];
 }
 
 

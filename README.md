@@ -37,6 +37,10 @@ tagsLabel.tags = tags;
 }];
 ```
 
+## Requirements  
+* iOS 8.0+
+* ARC
+
 ## TODO
 * add to CocoaPods
 
