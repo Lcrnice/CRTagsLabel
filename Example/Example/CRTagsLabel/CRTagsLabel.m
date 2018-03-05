@@ -21,7 +21,7 @@
 - (instancetype)initWithBlock:(NSAttributedString *(^)())block {
     self = [super initWithFrame:CGRectZero];
     if (self) {
-        self.updateTags = block;
+        _updateTags = block;
         [self setupTagsLabel];
     }
     

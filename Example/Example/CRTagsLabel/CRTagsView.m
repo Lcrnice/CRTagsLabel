@@ -27,8 +27,12 @@
 }
 
 - (void)setupTagsView {
-    [self addSubview:self.label];
-    [self.label mas_makeConstraints:^(MASConstraintMaker *make) {
+		_label = [UILabel new];
+		_label.textColor = [UIColor whiteColor];
+		_label.translatesAutoresizingMaskIntoConstraints = NO;
+		_label.layer.masksToBounds = YES;
+    [self addSubview:_label];
+    [_label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(@0);
         make.bottom.equalTo(@0);
         make.height.greaterThanOrEqualTo(@(0));
@@ -122,15 +126,6 @@
 }
 
 #pragma mark - getter 💤
-- (UILabel *)label {
-    if (!_label) {
-        _label = [UILabel new];
-        _label.textColor = [UIColor whiteColor];
-        _label.translatesAutoresizingMaskIntoConstraints = NO;
-        _label.layer.masksToBounds = YES;
-    }
-    return _label;
-}
 - (UIImage *)image {
     UIGraphicsBeginImageContextWithOptions(self.frame.size, YES, 0.0);
     [self.layer renderInContext:UIGraphicsGetCurrentContext()];
